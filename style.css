@@ -101,3 +101,79 @@ canvas{
     background-color: #f2f2f2;
 }
 
+@media (max-width: 600px){
+    .container{
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px;
+        height: auto;
+    }
+
+    canvas{
+        width: 90vw;
+        height: 60vh;
+    }
+
+    .tool-box{
+        width: 90vw;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 10px;
+    }
+
+    .button_tool,
+    .button_size,
+    .input_color{
+        width: 50px;
+        height: 50px;
+    }
+
+    .button_tool > span{
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1000px){
+    .container{
+        gap: 20px;
+        padding: 20px;
+        height: auto;
+    }
+
+    canvas{
+        width: 80vw;
+        height: 65vh;
+    }
+
+    .tool-box{
+        width: 130px;
+        gap: 12px;
+    }
+
+    .button_tool,
+    .button_size{
+        height: 50px;
+    }
+}
+
+@media (min-width: 1001px){
+    canvas{
+        width: 700px;
+        height: 500px;
+    }
+
+    .tool-box{
+        width: 120px;
+    }
+}
+
+@media (hover: none){
+    .button_tool:active,
+    .button_size:active{
+        transform: scale(0.92);
+        filter: brightness(1.25);
+        transition: 0.15s;
+    }
+}
